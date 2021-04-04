@@ -3,6 +3,7 @@ package io.daoyintech.web.resource;
 import io.daoyintech.domain.enums.CartStatus;
 import io.daoyintech.utils.TestContainerResource;
 import io.quarkus.test.common.QuarkusTestResource;
+import io.quarkus.test.junit.DisabledOnNativeImage;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.Test;
 
@@ -19,6 +20,8 @@ import static javax.ws.rs.core.Response.Status.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.*;
 
+
+@DisabledOnNativeImage
 @QuarkusTest
 @QuarkusTestResource(TestContainerResource.class)
 public class CartResourceTest {
